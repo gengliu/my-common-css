@@ -1,0 +1,187 @@
+
+html,
+body {
+    color: #000;
+    background: #fff;
+    font-family: 'PingFang SC', "Hiragino Sans GB", Arial,  "Microsoft YaHei", sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+a {
+    text-decoration: none;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+img {
+    max-width: 100%
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+caption,
+th {
+    text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+q:before,
+q:after {
+    content: ''
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+span.error {
+    color: #ff5b5b;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+i{
+    font-style: normal;
+}
+
+/*self form style*/
+input, select,textarea {
+    outline: none;
+}
+
+button {
+    border: 0;
+}
+
+input:focus {
+    
+}
+
+/* 自定义radio 样式*/
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #4285f4;
+    text-indent: .15em;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+input[type="radio"]:checked + label::before {
+    background-color: #4285f4;
+    background-clip: content-box;
+    padding: .2em;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* 自定义checkbox style*/
+input[type="checkbox"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+input[type="checkbox"] ~ label {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #d8dcd5;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked ~ label {
+    background:url("./images/slect-icon.png") center/contain no-repeat;
+    border: 0;
+}
+
+/* self form style end*/
+
+
+
+
+/*vue style start*/
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+    opacity: 0
+}
+
+[v-cloak] {
+    display: none;
+}
+/*vue style end*/
